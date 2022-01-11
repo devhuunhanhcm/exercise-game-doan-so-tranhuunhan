@@ -40,8 +40,8 @@ public class ResultServlet extends HttpServlet {
 			if(isFind && playerNumber > result) {
 				out.append(" <form action=\""+req.getContextPath() + UrlHelper.HANDLE_GAME+"\" method=\"post\">\r\n"
 						+ "		<div class=\"form-group\">\r\n"
-						+ "          <h4 class=\"text-danger\">Số bạn vừa nhập lớn hơn đáp án</h4>\r\n"
-						+ "          <label for=\"number\">Chọn lại số khác: </label>\r\n"
+						+ "          <h4 class=\"text-danger\"><i class=\"bi bi-exclamation-triangle\"></i> Số bạn vừa nhập lớn hơn đáp án</h4>\r\n"
+						+ "          <label for=\"number\"><i class=\"bi bi-pencil\"></i> Chọn lại số khác: </label>\r\n"
 						+ "          <input style=\"width: 100px;\" type=\"text\" class=\"form-control\" id=\"number\" name=\"number\" required placeholder=\"1 -> 1000\">\r\n"
 						+ "      </div>\r\n"
 						+ "      <button type=\"submit\" class=\"btn btn-primary\">Đoán ngay</button>"
@@ -53,8 +53,8 @@ public class ResultServlet extends HttpServlet {
 			if(isFind && playerNumber < result) {
 				out.append(" <form action=\""+req.getContextPath() + UrlHelper.HANDLE_GAME+"\" method=\"post\">\r\n"
 						+ "		<div class=\"form-group\">\r\n"
-						+ "          <h4 class=\"text-danger\">Số bạn vừa nhập nhỏ hơn đáp án</h4>\r\n"
-						+ "          <label for=\"number\">Chọn lại số khác: </label>\r\n"
+						+ "          <h4 class=\"text-danger\"><i class=\"bi bi-exclamation-triangle\"></i> Số bạn vừa nhập nhỏ hơn đáp án</h4>\r\n"
+						+ "          <label for=\"number\"><i class=\"bi bi-pencil\"></i> Chọn lại số khác: </label>\r\n"
 						+ "          <input style=\"width: 100px;\" type=\"text\" class=\"form-control\" id=\"number\" name=\"number\" required placeholder=\"1 -> 1000\">\r\n"
 						+ "      </div>\r\n"
 						+ "      <button type=\"submit\" class=\"btn btn-primary\">Đoán ngay</button>"
@@ -65,8 +65,9 @@ public class ResultServlet extends HttpServlet {
 			}
 			if(isFind && playerNumber == result) {
 				out.append(" <div>\r\n"
-						+ "        <h1 class=\"text-success\">Chúc mừng bạn số bạn vừa đoán là đáp án chính xác!!</h1>\r\n"
-						+ "<h2>Số lần đoán của bạn là:"
+						+ "        <h1 class=\"text-success\"><i class=\"bi bi-trophy\"></i> Chúc mừng bạn số bạn vừa đoán là đáp án chính xác!!</h1>\r\n"
+						+ "<h2>Kết quả: "+ result +"</h2>"
+						+ "<h2 class=\"mt-3\">Số lần đoán của bạn là: "
 						+ player.getTimesGuess()
 						+ "</h2>"
 						+ "        <a class=\"btn btn-primary\" href=\""+req.getContextPath() + UrlHelper.HOME +"\">Quay trở lại trang chủ!</a>\r\n"

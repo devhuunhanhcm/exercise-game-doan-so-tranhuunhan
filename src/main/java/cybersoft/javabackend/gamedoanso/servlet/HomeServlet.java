@@ -31,7 +31,7 @@ public class HomeServlet extends HttpServlet {
 		req.getSession().setAttribute("playerList", playerList);
 		
 		out.append("<form method=\"post\" action=\"\">\r\n"
-				+ "        <h1>Game đoán số</h1>\r\n"
+				+ "        <h1><i class=\"bi bi-controller\"></i> Game đoán số</h1>\r\n"
 				+ "          <div class=\"form-group\">\r\n"
 				+ "            <label class=\"h4\" for=\"name\">Nhập tên của bạn</label>\r\n"
 				+ "            <input  type=\"text\" required class=\"form-control\" id=\"name\" name=\"name\" style=\"width:300px\">\r\n"
@@ -42,11 +42,11 @@ public class HomeServlet extends HttpServlet {
 		
 		if(!playerList.isEmpty()) {
 			
-			out.append("<h3 class=\"mt-5\">Bảng xếp hạng</h3>"
+			out.append("<h3 class=\"mt-5\"><i class=\"bi bi-trophy\"></i> Bảng xếp hạng</h3>"
 					+ "<table class=\"table\">\r\n"
 					+ "      <thead>\r\n"
 					+ "        <tr>\r\n"
-					+ "          <th scope=\"col\">Xếp hạng</th>\r\n"
+					+ "          <th scope=\"col\">Xếp hạng <i class=\"bi bi-award\"></i></th>\r\n"
 					+ "          <th scope=\"col\">Tên</th>\r\n"
 					+ "          <th scope=\"col\">Số lần đoán</th>\r\n"
 					+ "        </tr>\r\n"
@@ -75,9 +75,9 @@ public class HomeServlet extends HttpServlet {
 		PrintWriter out = resp.getWriter();
 		out.append(Vendor.GETBOOTSTRAP);
 		out.append("<form  action=\""+ req.getContextPath() + UrlHelper.HANDLE_GAME+"\" method=\"post\" >\r\n"
-				+ "      <h1>Hello : "+ name +" </h1>\r\n"
+				+ "      <h1>Hello <i class=\"bi bi-person-workspace\"></i> "+ name +" </h1>\r\n"
 				+ "        <div class=\"form-group\">\r\n"
-				+ "          <label class=\"h4\" for=\"number\">Hãy nhập số may mắn của bạn từ 1 -> 1000: </label>\r\n"
+				+ "          <label class=\"h4\" for=\"number\"><i class=\"bi bi-pencil\"></i> Hãy nhập số may mắn của bạn từ 1 -> 1000: </label>\r\n"
 				+ "          <input style=\"width: 100px;\" type=\"text\" required  class=\"form-control\" id=\"number\" name=\"number\" placeholder=\"1 - 1000\">\r\n"
 				+ "        </div>\r\n"
 				+ "        <button type=\"submit\" class=\"btn btn-primary\">Đoán ngay</button>\r\n"
