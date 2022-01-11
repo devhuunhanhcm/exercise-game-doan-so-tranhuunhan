@@ -1,7 +1,7 @@
 package cybersoft.javabackend.gamedoanso.vendor;
 
 public class Vendor {
-	public static final String GETBOOSTRAP = "<!doctype html>\r\n"
+	public static final String GETBOOTSTRAP = "<!doctype html>\r\n"
 			+ "<html lang=\"en\">\r\n"
 			+ "  <head>\r\n"
 			+ "    <title>Game Đoán số</title>\r\n"

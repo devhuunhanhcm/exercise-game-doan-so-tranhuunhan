@@ -26,7 +26,7 @@ public class HomeServlet extends HttpServlet {
 		resp.setContentType("text/html");
 		resp.setCharacterEncoding("utf-8");
 		PrintWriter out = resp.getWriter();
-		out.append(Vendor.GETBOOSTRAP);
+		out.append(Vendor.GETBOOTSTRAP);
 		List<Player> playerList = gameRecord.getPlayerList();
 		req.getSession().setAttribute("playerList", playerList);
 		
@@ -73,7 +73,7 @@ public class HomeServlet extends HttpServlet {
 		resp.setCharacterEncoding("utf-8");
 		req.getSession().setAttribute("name", name);
 		PrintWriter out = resp.getWriter();
-		out.append(Vendor.GETBOOSTRAP);
+		out.append(Vendor.GETBOOTSTRAP);
 		out.append("<form  action=\""+ req.getContextPath() + UrlHelper.HANDLE_GAME+"\" method=\"post\" >\r\n"
 				+ "      <h1>Hello : "+ name +" </h1>\r\n"
 				+ "        <div class=\"form-group\">\r\n"

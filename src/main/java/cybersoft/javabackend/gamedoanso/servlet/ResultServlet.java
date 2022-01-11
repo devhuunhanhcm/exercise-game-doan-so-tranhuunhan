@@ -24,7 +24,7 @@ public class ResultServlet extends HttpServlet {
 		resp.setContentType("text/html");
 		resp.setCharacterEncoding("utf-8");
 		PrintWriter out = resp.getWriter();
-		out.append(Vendor.GETBOOSTRAP);
+		out.append(Vendor.GETBOOTSTRAP);
 		HttpSession session = req.getSession();
 		
 		boolean flag = true;
@@ -40,7 +40,7 @@ public class ResultServlet extends HttpServlet {
 			if(isFind && playerNumber > result) {
 				out.append(" <form action=\""+req.getContextPath() + UrlHelper.HANDLE_GAME+"\" method=\"post\">\r\n"
 						+ "		<div class=\"form-group\">\r\n"
-						+ "          <h4>Số bạn vừa nhập lớn hơn đáp án</h4>\r\n"
+						+ "          <h4 class=\"text-danger\">Số bạn vừa nhập lớn hơn đáp án</h4>\r\n"
 						+ "          <label for=\"number\">Chọn lại số khác: </label>\r\n"
 						+ "          <input style=\"width: 100px;\" type=\"text\" class=\"form-control\" id=\"number\" name=\"number\" required placeholder=\"1 -> 1000\">\r\n"
 						+ "      </div>\r\n"
@@ -53,7 +53,7 @@ public class ResultServlet extends HttpServlet {
 			if(isFind && playerNumber < result) {
 				out.append(" <form action=\""+req.getContextPath() + UrlHelper.HANDLE_GAME+"\" method=\"post\">\r\n"
 						+ "		<div class=\"form-group\">\r\n"
-						+ "          <h4>Số bạn vừa nhập nhỏ hơn đáp án</h4>\r\n"
+						+ "          <h4 class=\"text-danger\">Số bạn vừa nhập nhỏ hơn đáp án</h4>\r\n"
 						+ "          <label for=\"number\">Chọn lại số khác: </label>\r\n"
 						+ "          <input style=\"width: 100px;\" type=\"text\" class=\"form-control\" id=\"number\" name=\"number\" required placeholder=\"1 -> 1000\">\r\n"
 						+ "      </div>\r\n"
@@ -65,7 +65,7 @@ public class ResultServlet extends HttpServlet {
 			}
 			if(isFind && playerNumber == result) {
 				out.append(" <div>\r\n"
-						+ "        <h1>Chúc mừng bạn số bạn vừa đoán là đáp án chính xác!!</h1>\r\n"
+						+ "        <h1 class=\"text-success\">Chúc mừng bạn số bạn vừa đoán là đáp án chính xác!!</h1>\r\n"
 						+ "<h2>Số lần đoán của bạn là:"
 						+ player.getTimesGuess()
 						+ "</h2>"

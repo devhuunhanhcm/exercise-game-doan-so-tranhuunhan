@@ -39,7 +39,7 @@ public class HandleGame extends HttpServlet{
 		}
 		
 		if(session.getAttribute("result") == null) {
-			result = ThreadLocalRandom.current().nextInt(1,11);
+			result = ThreadLocalRandom.current().nextInt(1,1001);
 			session.setAttribute("result", result);
 		}
 		req.getRequestDispatcher(UrlHelper.RESULT).forward(req, resp);
